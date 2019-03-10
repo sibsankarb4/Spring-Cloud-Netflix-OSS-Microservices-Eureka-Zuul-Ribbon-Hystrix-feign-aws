@@ -1,0 +1,16 @@
+server:
+  port: 80
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: baeldung_route
+        uri: http://www.sibsankar.com
+        predicates:
+        - Path=/sibsankar
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
